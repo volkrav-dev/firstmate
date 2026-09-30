@@ -1,0 +1,46 @@
+===== [BASE eb77f02 (before fix)] parent data/projects.md
+- foo [direct-PR] - decoy single-word project (added 2026-09-28)
+- foo bar [direct-PR +yolo branch=me/] - spaced project (added 2026-09-28)
+$ FM_HOME=<lab> bin/fm-home-seed.sh design <sub> 'foo bar'
+exit=1
+allowed[3]: no-mistakes axi status --run 01M3S3MRWSWKTXE46Z92DRCF87,no-mistakes axi logs --run 01M3S3MRWSWKTXE46Z92DRCF87 --step <phase>,no-mistakes doctor
+help[1]: "Return control to the outer executor; do not initialize, start, reattach, rerun, respond to, synchronize, abort, or eject a pipeline from this step."
+error: failed to initialize no-mistakes for foo bar at /private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-lab.rRZyvP-sub/projects/foo bar
+--- secondmate data/projects.md:
+cat: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-lab.rRZyvP-sub/data/projects.md: No such file or directory
+--- fm-project-mode.sh 'foo bar' in secondmate home:
+warn: no registry at /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-lab.rRZyvP-sub/data/projects.md; defaulting foo bar to no-mistakes off
+no-mistakes off
+--- fm-project-mode.sh --branch-prefix 'foo bar' in secondmate home:
+warn: no registry at /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-lab.rRZyvP-sub/data/projects.md; defaulting foo bar to no-mistakes off
+fm/
+--- no-mistakes remote on direct-PR clone (expect none):
+fatal: cannot change to '/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-lab.rRZyvP-sub/projects/foo bar': No such file or directory 
+--- charter project list:
+grep: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-lab.rRZyvP-sub/data/charter.md: No such file or directory
+--- reseed after a stale '- foo bar [no-mistakes]' line is appended:
+/Users/volkrav/.no-mistakes/evidence/01M3S3MRWSWKTXE46Z92DRCF87/drive-home-seed.sh: line 35: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-lab.rRZyvP-sub/data/projects.md: No such file or directory
+exit=1
+cat: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-lab.rRZyvP-sub/data/projects.md: No such file or directory
+
+===== [TARGET d289e51 (after fix)] parent data/projects.md
+- foo [direct-PR] - decoy single-word project (added 2026-09-28)
+- foo bar [direct-PR +yolo branch=me/] - spaced project (added 2026-09-28)
+$ FM_HOME=<lab> bin/fm-home-seed.sh design <sub> 'foo bar'
+exit=0
+scaffolded: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-lab.gIdW2i/data/design/brief.md (secondmate charter)
+warning: You appear to have cloned an empty repository.
+home=/private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-lab.gIdW2i-sub
+--- secondmate data/projects.md:
+- foo bar [direct-PR +yolo branch=me/] - spaced project (added 2026-09-28)
+--- fm-project-mode.sh 'foo bar' in secondmate home:
+direct-PR on
+--- fm-project-mode.sh --branch-prefix 'foo bar' in secondmate home:
+me/
+--- no-mistakes remote on direct-PR clone (expect none):
+origin 
+--- charter project list:
+- foo bar
+--- reseed after a stale '- foo bar [no-mistakes]' line is appended:
+exit=0
+- foo bar [direct-PR +yolo branch=me/] - spaced project (added 2026-09-28)
