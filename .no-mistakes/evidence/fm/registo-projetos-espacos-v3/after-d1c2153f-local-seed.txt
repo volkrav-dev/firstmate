@@ -1,0 +1,45 @@
+== parent registry
+- foo [direct-PR +yolo branch=f/] - short project (added 2026-09-30)
+- foo bar [direct-PR +yolo branch=me/] - spaced project (added 2026-09-30)
+- foo baz [direct-PR] - sibling (added 2026-09-30)
+== parent: fm-project-mode.sh 'foo bar' -> direct-PR on
+== S1 seed secondmate 'design' with project 'foo bar'
+scaffolded: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/a2/lab.Us9sn1/data/design/brief.md (secondmate charter)
+warning: You appear to have cloned an empty repository.
+home=/private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-sp.DgNTXf/a2/sub-01M3SE49R9XEJ8C240Q1S4ZJZW
+exit=0
+-- secondmate data/projects.md:
+- foo bar [direct-PR +yolo branch=me/] - spaced project (added 2026-09-30)
+-- secondmate fm-project-mode.sh 'foo bar' -> direct-PR on
+-- secondmate branch prefix -> me/
+-- charter project list:
+10:- foo bar
+== S2 reseed with foo, foo baz added, plus a stale duplicate 'foo bar' line
+warning: You appear to have cloned an empty repository.
+home=/private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-sp.DgNTXf/a2/sub-01M3SE49R9XEJ8C240Q1S4ZJZW
+exit=0
+home=/private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-sp.DgNTXf/a2/sub-01M3SE49R9XEJ8C240Q1S4ZJZW
+exit=0
+-- secondmate data/projects.md after reseeding 'foo bar' alone:
+- foo [direct-PR +yolo branch=f/] - short project (added 2026-09-30)
+- foo baz [direct-PR] - sibling (added 2026-09-30)
+- foo bar [direct-PR +yolo branch=me/] - spaced project (added 2026-09-30)
+-- secondmate mode 'foo' -> direct-PR on
+-- secondmate mode 'foo bar' -> direct-PR on
+-- secondmate mode 'foo baz' -> direct-PR off
+== S3 adversarial: seed names with ' - ' and ' ['
+error: project Acme - Site contains " - " or " [", which the project registry cannot tell apart from a description or annotation; rename the project (directory and registry entry) without that sequence and seed again
+reseed exit=1
+secondmate home unchanged
+error: project Acme - Site contains " - " or " [", which the project registry cannot tell apart from a description or annotation; rename the project (directory and registry entry) without that sequence and seed again
+fresh seed exit=1; new homes: 0
+error: project foo [x] contains " - " or " [", which the project registry cannot tell apart from a description or annotation; rename the project (directory and registry entry) without that sequence and seed again
+reseed exit=1
+secondmate home unchanged
+error: project foo [x] contains " - " or " [", which the project registry cannot tell apart from a description or annotation; rename the project (directory and registry entry) without that sequence and seed again
+fresh seed exit=1; new homes: 0
+== S4 project-less seed refuses a home with a spaced registry entry
+error: cannot seed project-less secondmate home /private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-sp.DgNTXf/a2/sub-01M3SE49R9XEJ8C240Q1S4ZJZW because it contains project data
+error: projects/ entries: foo, foo bar, foo baz
+error: data/projects.md entries: foo, foo baz, foo bar
+error: retire or clean this home first before seeding with --no-projects

@@ -1,0 +1,62 @@
+== parent registry
+- foo [direct-PR +yolo branch=f/] - short project (added 2026-09-30)
+- foo bar [direct-PR +yolo branch=me/] - spaced project (added 2026-09-30)
+- foo baz [direct-PR] - sibling (added 2026-09-30)
+== parent: fm-project-mode.sh 'foo bar' -> direct-PR on
+== S1 seed secondmate 'design' with project 'foo bar'
+allowed[3]: no-mistakes axi status --run 01M3SE49R9XEJ8C240Q1S4ZJZW,no-mistakes axi logs --run 01M3SE49R9XEJ8C240Q1S4ZJZW --step <phase>,no-mistakes doctor
+help[1]: "Return control to the outer executor; do not initialize, start, reattach, rerun, respond to, synchronize, abort, or eject a pipeline from this step."
+error: failed to initialize no-mistakes for foo bar at /private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-sp.DgNTXf/b2/sub-base-65c75b0d/projects/foo bar
+exit=1
+-- secondmate data/projects.md:
+cat: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/projects.md: No such file or directory
+-- secondmate fm-project-mode.sh 'foo bar' -> warn: no registry at /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/projects.md; defaulting foo bar to no-mistakes off
+no-mistakes off
+-- secondmate branch prefix -> warn: no registry at /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/projects.md; defaulting foo bar to no-mistakes off
+fm/
+-- charter project list:
+grep: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/charter.md: No such file or directory
+== S2 reseed with foo, foo baz added, plus a stale duplicate 'foo bar' line
+/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/drive.sh: line 24: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/projects.md: No such file or directory
+help[1]: "Return control to the outer executor; do not initialize, start, reattach, rerun, respond to, synchronize, abort, or eject a pipeline from this step."
+error: failed to initialize no-mistakes for foo baz at /private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-sp.DgNTXf/b2/sub-base-65c75b0d/projects/foo baz
+exit=1
+help[1]: "Return control to the outer executor; do not initialize, start, reattach, rerun, respond to, synchronize, abort, or eject a pipeline from this step."
+error: failed to initialize no-mistakes for foo bar at /private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-sp.DgNTXf/b2/sub-base-65c75b0d/projects/foo bar
+exit=1
+-- secondmate data/projects.md after reseeding 'foo bar' alone:
+cat: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/projects.md: No such file or directory
+-- secondmate mode 'foo' -> warn: no registry at /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/projects.md; defaulting foo to no-mistakes off
+no-mistakes off
+-- secondmate mode 'foo bar' -> warn: no registry at /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/projects.md; defaulting foo bar to no-mistakes off
+no-mistakes off
+-- secondmate mode 'foo baz' -> warn: no registry at /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/projects.md; defaulting foo baz to no-mistakes off
+no-mistakes off
+== S3 adversarial: seed names with ' - ' and ' ['
+cat: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/projects.md: No such file or directory
+ls: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/projects: No such file or directory
+/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/drive.sh: line 31: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/charter.md: No such file or directory
+error: failed to initialize no-mistakes for foo bar at /private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-sp.DgNTXf/b2/sub-base-65c75b0d/projects/foo bar
+reseed exit=1
+cat: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/projects.md: No such file or directory
+ls: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/projects: No such file or directory
+/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/drive.sh: line 33: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/charter.md: No such file or directory
+secondmate home unchanged
+error: failed to initialize no-mistakes for Acme - Site at /private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-sp.DgNTXf/b2/new-20765/projects/Acme - Site
+fresh seed exit=1; new homes: 0
+cat: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/projects.md: No such file or directory
+ls: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/projects: No such file or directory
+/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/drive.sh: line 31: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/charter.md: No such file or directory
+error: failed to initialize no-mistakes for foo bar at /private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-sp.DgNTXf/b2/sub-base-65c75b0d/projects/foo bar
+reseed exit=1
+cat: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/projects.md: No such file or directory
+ls: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/projects: No such file or directory
+/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/drive.sh: line 33: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/sub-base-65c75b0d/data/charter.md: No such file or directory
+secondmate home unchanged
+error: failed to initialize no-mistakes for foo [x] at /private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-sp.DgNTXf/b2/new-2849/projects/foo [x]
+fresh seed exit=1; new homes: 0
+== S4 project-less seed refuses a home with a spaced registry entry
+Turn off this advice by setting config variable advice.detachedHead to false
+
+scaffolded: /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-sp.DgNTXf/b2/lab.tcpmQa/data/design/brief.md (secondmate charter)
+home=/private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-sp.DgNTXf/b2/sub-base-65c75b0d
