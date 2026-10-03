@@ -1,0 +1,6 @@
+== primary config/dispatch-never-send and config/launch-env-allowlist propagate to a secondmate home
+before: secondmate config: []
+propagate rc=0
+after: secondmate config: [dispatch-never-send launch-env-allowlist ]
+-- sm/config/dispatch-never-send: secret-token-x
+-- sm/config/launch-env-allowlist: MY_VAR

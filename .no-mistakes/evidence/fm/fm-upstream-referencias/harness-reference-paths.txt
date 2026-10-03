@@ -1,0 +1,74 @@
+== Backtick relative paths in references/harness/*.md resolved against the skill directory (router Path contract):
+ok      ../../../AGENTS.md
+ok      ../../../bin/backends/herdr.sh
+ok      ../../../bin/backends/tmux.sh
+ok      ../../../bin/fm-agy-trust.sh
+ok      ../../../bin/fm-busy-event.sh
+ok      ../../../bin/fm-busy-lib.sh
+ok      ../../../bin/fm-claude-stop-autoarm.sh
+ok      ../../../bin/fm-claude-trust.sh
+ok      ../../../bin/fm-composer-lib.sh
+ok      ../../../bin/fm-control-lib.sh
+ok      ../../../bin/fm-cursor-lib.sh
+ok      ../../../bin/fm-devin-config.sh
+ok      ../../../bin/fm-gemini-lib.sh
+ok      ../../../bin/fm-git-strip-ai-trailers.sh
+ok      ../../../bin/fm-guard.sh
+ok      ../../../bin/fm-harness.sh
+ok      ../../../bin/fm-send.sh
+ok      ../../../bin/fm-session-lock-lib.sh
+ok      ../../../bin/fm-session-start.sh
+ok      ../../../bin/fm-spawn.sh
+ok      ../../../bin/fm-subagent-pretool-check.sh
+ok      ../../../bin/fm-supervise-daemon.sh
+ok      ../../../bin/fm-task-inbox-lib.sh
+ok      ../../../bin/fm-teardown.sh
+ok      ../../../bin/fm-tmux-lib.sh
+ok      ../../../bin/fm-turnend-guard-cursor.sh
+ok      ../../../bin/fm-turnend-guard-grok.sh
+ok      ../../../bin/fm-turnend-guard.sh
+ok      ../../../bin/fm-wake-lib.sh
+ok      ../../../bin/fm-watch-arm.sh
+ok      ../../../docs/arm-pretool-check.md
+ok      ../../../docs/configuration.md
+ok      ../../../docs/herdr-backend.md
+ok      ../../../docs/subagent-guard.md
+ok      ../../../docs/supervision-protocols/
+ok      ../../../docs/supervision-protocols/cursor.md
+ok      ../../../docs/supervision-protocols/omp.md
+ok      ../../../docs/supervision-protocols/pi.md
+ok      ../../../docs/tmux-backend.md
+ok      ../../../docs/turnend-guard.md
+ok      ../../../docs/verification/agy.md
+ok      ../../../docs/verification/muse.md
+ok      ../../../docs/verification/rovo.md
+ok      ../../../docs/verification/runtime-backends.md
+ok      ../../../docs/verification/supervision.md
+ok      ../../../tests/fm-backend-herdr.test.sh
+ok      ../../../tests/fm-composer-ghost.test.sh
+ok      ../../../tests/fm-composer-lib.test.sh
+ok      ../../../tests/fm-gemini-harness.test.sh
+ok      ../../../tests/fm-omp-harness.test.sh
+ok      ../../../tests/fm-rovo-signals-live-e2e.test.sh
+ok      ../../../tests/fm-tmux-submit-busy.test.sh
+ok      ../firstmate-coding-guidelines/SKILL.md
+
+== Remaining 5-level backtick spellings: 0
+
+== Markdown link hrefs resolved file-relative:
+ok      references/harness/claude.md -> ../../../../../docs/configuration.md
+ok      references/harness/claude.md -> ../../../../../docs/verification/supervision.md
+ok      references/harness/claude.md -> ../../../../../docs/supervision-host.md
+ok      references/harness/codex.md -> ../../../../../docs/supervision-host.md
+ok      references/harness/cursor.md -> ../../../../../docs/supervision-host.md
+ok      references/harness/devin.md -> ../../../../../docs/verification/devin.md
+ok      references/harness/grok.md -> ../../../../../docs/supervision-host.md
+ok      references/harness/muse.md -> ../../../../../docs/configuration.md
+ok      references/harness/omp.md -> ../../../../../docs/supervision-host.md
+ok      references/harness/opencode.md -> ../../../../../docs/supervision-host.md
+ok      references/harness/pi.md -> ../../../../../docs/verification/runtime-backends.md
+
+== Relative-time narration in agy/kimi/grok/rovo:
+references/harness/kimi.md:17:| Trust dialog | A fresh worktree shows `Trust this folder?` with `Trust this folder` pre-selected; spawn reads the visible pane, recognizes the complete dialog (its title, both navigation-hint tokens `↑↓ navigate` and `Enter select` - matched separately so a hint wrapped in a narrow pane still counts - the selected `❯ Trust this folder`, and `Don't trust`), sends Enter on every poll the complete dialog is still there, verifies that a later visible-pane capture no longer contains it, and then continues the ordinary readiness gate. Trust is never pre-registered in `config.toml`; the dialog is answered live. |
+references/harness/grok.md:34:The pane showed `Enter:send now` and the text stayed pending.
+references/harness/rovo.md:54:The launch-then-send live guard (`../../../tests/fm-rovo-signals-live-e2e.test.sh`) now reproduces it over a raw PTY too: an earlier single fixed-timer Escape landed unreliably (the interrupt instant is timing-sensitive over a bare PTY), so the guard sends Escape across the live tool-call window until the cancel renders - a deterministic way to reproduce a timing-sensitive interrupt, and confirmed to print `Agent cancelled` every run.

@@ -1,0 +1,7 @@
+primary config: dispatch-never-send launch-env-allowlist 
+secondmate config before: 
+rc=0
+secondmate config after: dispatch-never-send launch-env-allowlist 
+both files inherited byte-identical
+.gitignore:13:config/	config/dispatch-never-send
+.gitignore:13:config/	config/launch-env-allowlist

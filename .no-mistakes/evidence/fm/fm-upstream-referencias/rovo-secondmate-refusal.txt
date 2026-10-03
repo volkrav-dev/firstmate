@@ -1,0 +1,7 @@
+$ bin/fm-spawn.sh mate1 --secondmate --harness rovo
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-lab.l2wLI6
+error: rovo is a verified crewmate/scout adapter only and cannot run a secondmate; it has no primary supervision protocol. Select a harness verified for secondmates.
+rc=
+$ bin/fm-spawn.sh mate2 --secondmate --harness gemini
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-lab.l2wLI6
+error: gemini is a verified crewmate/scout adapter only and cannot run a secondmate; it has no primary supervision protocol. Select a harness verified for secondmates.

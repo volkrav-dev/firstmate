@@ -1,0 +1,29 @@
+== base 1f3e7696 (paths resolved from .agents/skills/harness-adapters/) ==
+MISSING references/harness/agy.md -> ../../../../../AGENTS.md
+MISSING references/harness/agy.md -> ../../../../../bin/fm-agy-trust.sh
+MISSING references/harness/agy.md -> ../../../../../bin/fm-busy-lib.sh
+MISSING references/harness/agy.md -> ../../../../../bin/fm-harness.sh
+MISSING references/harness/agy.md -> ../../../../../bin/fm-session-lock-lib.sh
+MISSING references/harness/agy.md -> ../../../../../bin/fm-spawn.sh
+MISSING references/harness/agy.md -> ../../../../../docs/verification/agy.md
+MISSING references/harness/claude.md -> ../../../../../bin/fm-spawn.sh
+MISSING references/harness/claude.md -> ../../../../../docs/verification/supervision.md
+MISSING references/harness/cursor.md -> ../../../../../docs/configuration.md
+MISSING references/harness/devin.md -> ../../../../../bin/fm-composer-lib.sh
+MISSING references/harness/devin.md -> ../../../../../bin/fm-devin-config.sh
+MISSING references/harness/devin.md -> ../../../../../bin/fm-spawn.sh
+MISSING references/harness/devin.md -> ../../../../../bin/fm-task-inbox-lib.sh
+MISSING references/harness/devin.md -> ../../../../../docs/configuration.md
+MISSING references/harness/gemini.md -> ../../../../../AGENTS.md
+MISSING references/harness/gemini.md -> ../../../../../bin/fm-gemini-lib.sh
+MISSING references/harness/gemini.md -> ../../../../../bin/fm-harness.sh
+MISSING references/harness/gemini.md -> ../../../../../bin/fm-spawn.sh
+MISSING references/harness/gemini.md -> ../../../../../bin/fm-teardown.sh
+MISSING references/harness/gemini.md -> ../../../../../tests/fm-gemini-harness.test.sh
+MISSING references/harness/rovo.md -> ../../../../docs/verification/rovo.md
+MISSING references/harness/rovo.md -> ../../../../tests/fm-rovo-signals-live-e2e.test.sh
+MISSING references/harness/rovo.md -> ../../../references/common/model-and-effort.md
+MISSING references/harness/rovo.md -> ../../firstmate-coding-guidelines/SKILL.md
+== target HEAD ==
+116
+no missing paths

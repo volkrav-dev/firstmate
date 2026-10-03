@@ -1,0 +1,16 @@
+$ FM_HOME=<lab> bin/fm-spawn.sh lab-sm-rovo <lab>/sm --harness rovo --secondmate
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-lab.phMdhm/primary
+error: rovo is a verified crewmate/scout adapter only and cannot run a secondmate; it has no primary supervision protocol. Select a harness verified for secondmates.
+exit=1
+$ FM_HOME=<lab> bin/fm-spawn.sh lab-sm-agy <lab>/sm --harness agy --secondmate
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-lab.phMdhm/primary
+error: agy is a verified crewmate/scout adapter only and cannot run a secondmate; it has no primary supervision protocol. Select a harness verified for secondmates.
+exit=1
+$ FM_HOME=<lab> bin/fm-spawn.sh lab-sm-devin <lab>/sm --harness devin --secondmate
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-lab.phMdhm/primary
+error: devin is a verified crewmate/scout adapter only and cannot run a secondmate; it has no primary supervision protocol. Select a harness verified for secondmates.
+exit=1
+$ FM_HOME=<lab> bin/fm-spawn.sh lab-sm-gemini <lab>/sm --harness gemini --secondmate
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-lab.phMdhm/primary
+error: gemini is a verified crewmate/scout adapter only and cannot run a secondmate; it has no primary supervision protocol. Select a harness verified for secondmates.
+exit=1

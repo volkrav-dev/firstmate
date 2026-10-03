@@ -1,0 +1,15 @@
+# live lab scout1 (real claude via fm-spawn.sh --scout); sampled every 4s
+23:36:00 | tail -1 status: paused [at=1791070538]: background sleep 45 (spec step 1); resumes when it exits | fm-crew-state: state: paused · source: status-log · background sleep 45 (spec step 1); resumes when it exits
+23:36:04 | tail -1 status: paused [at=1791070538]: background sleep 45 (spec step 1); resumes when it exits | fm-crew-state: state: paused · source: status-log · background sleep 45 (spec step 1); resumes when it exits
+23:36:08 | tail -1 status: paused [at=1791070538]: background sleep 45 (spec step 1); resumes when it exits | fm-crew-state: state: paused · source: status-log · background sleep 45 (spec step 1); resumes when it exits
+23:36:12 | tail -1 status: paused [at=1791070538]: background sleep 45 (spec step 1); resumes when it exits | fm-crew-state: state: paused · source: status-log · background sleep 45 (spec step 1); resumes when it exits
+23:36:17 | tail -1 status: paused [at=1791070538]: background sleep 45 (spec step 1); resumes when it exits | fm-crew-state: state: paused · source: status-log · background sleep 45 (spec step 1); resumes when it exits
+23:36:21 | tail -1 status: paused [at=1791070538]: background sleep 45 (spec step 1); resumes when it exits | fm-crew-state: state: working · source: pane · harness busy (claude-hook)
+23:36:25 | tail -1 status: paused [at=1791070538]: background sleep 45 (spec step 1); resumes when it exits | fm-crew-state: state: working · source: pane · harness busy (claude-hook)
+23:36:29 | tail -1 status: paused [at=1791070538]: background sleep 45 (spec step 1); resumes when it exits | fm-crew-state: state: working · source: pane · harness busy (claude-hook)
+23:36:34 | tail -1 status: paused [at=1791070538]: background sleep 45 (spec step 1); resumes when it exits | fm-crew-state: state: working · source: pane · harness busy (claude-hook)
+23:36:38 | tail -1 status: done [at=1791070598]: labproj has exactly one commit (f78c553 init); report at data/scout1/report.md | fm-crew-state: state: working · source: pane · harness busy (claude-hook)
+23:36:42 | tail -1 status: done [at=1791070598]: labproj has exactly one commit (f78c553 init); report at data/scout1/report.md | fm-crew-state: state: done · source: status-log · labproj has exactly one commit (f78c553 init); report at data/scout1/report.md
+23:36:46 | tail -1 status: done [at=1791070598]: labproj has exactly one commit (f78c553 init); report at data/scout1/report.md | fm-crew-state: state: done · source: status-log · labproj has exactly one commit (f78c553 init); report at data/scout1/report.md
+23:36:51 | tail -1 status: done [at=1791070598]: labproj has exactly one commit (f78c553 init); report at data/scout1/report.md | fm-crew-state: state: done · source: status-log · labproj has exactly one commit (f78c553 init); report at data/scout1/report.md
+23:36:55 | tail -1 status: done [at=1791070598]: labproj has exactly one commit (f78c553 init); report at data/scout1/report.md | fm-crew-state: state: done · source: status-log · labproj has exactly one commit (f78c553 init); report at data/scout1/report.md
