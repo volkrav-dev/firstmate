@@ -1,0 +1,17 @@
+  Read 1 file                        
+⏺ Capitão, aqui vão as respostas, tiradas só de .agents/skills/afk/SKILL.md:
+  Q1: Não. "Keep the fleet moving" não nomeia nenhum merge e o projeto não tem yolo aprovado, por isso o PR #42 fica à espera do seu regresso, mesmo estando verde: "The away words may authorize a
+  concrete merge or an explicitly bounded set; do not infer a grant from absence." (linha 98, com "Away mode does not grant merge authority." na linha 96 e "hold any uncovered merge for the captain's
+  return" na linha 99)
+  Q2: Sim. Essas palavras autorizam um merge concreto, por isso a sessão pode fazer o merge do PR #42 quando ficar verde no head atual. O merge tem de passar pelos scripts com as verificações e tem de
+  ser síncrono. Fica sem efeito se o pedido for destrutivo, irreversível ou sensível em termos de segurança, ou se o registo de ausência já tiver sido arquivado: "Merge only green, in-scope work
+  already covered by the captain's explicit instruction or the project's approved yolo posture. The away words may authorize a concrete merge or an explicitly bounded set; do not infer a grant from
+  absence." (linhas 97-98, com "A merge made while the away record exists must be synchronous" na linha 102)
+✻ Churned for 8s · done 11:35 PM
+                                                                                                                        ✘ Auto-update failed · Try claude doctor or npm i -g @anthropic-ai/claude-code
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯                                                                                                                                                                                                       
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  claude | Opus 5.5 (1M context) high | contexto 61.5k/1M (6%)                                                                                                                                          
+  quota 5h usada 37% | quota 7d usada 43% | quota Fable 7d usada 2% (há 1h) | cache 44%
+  ⏸ manual mode on · ← for agents
