@@ -1,0 +1,26 @@
+===== TARGET 399201f8
+lab home (symlinked spelling): /var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T//fm-lab.pXJnHk
+lab home (physical spelling):  /private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-lab.pXJnHk
+verified: process-event-adapter/1 (file-signal)
+registered: lab-src (file-signal from org.firstmate.example.file-signal@1.0.0)
+retire: bin/fm-procevent.sh retire lab-src --if-owner sha256:6718389e5eda6456a228a8de14bbd1bcb80e6d314327ac1b5bb036b41958fd16
+start exit: 0
+--- start output:
+not-autohandled: lab-src (left for the handler; still unacknowledged)
+retired: lab-src (adapter classified the captured result terminal)
+captured: ./lab-src.1.result
+--- H3t: source record after terminal result:
+absent (retired)
+captured: lab-src.1.result: build 99 completed successfully
+--- CLS: classify via symlinked spelling:
+file-signal
+exit: 0
+--- CLS: classify via physical spelling:
+file-signal
+exit: 0
+--- adversarial: copy of result outside inbox, symlinked spelling:
+error[path-unsafe]: captured result must be directly inside this home's process-event inbox
+exit: 1
+--- adversarial: inbox entry that is a symlink to the outside copy:
+error: captured result has no readable adapter identity: /private/var/folders/x7/bt2qm_cj5rz6m0t9bsg_vcrc0000gn/T/fm-lab.pXJnHk/state/procevent-inbox/lab-link.1.result
+exit: 1
